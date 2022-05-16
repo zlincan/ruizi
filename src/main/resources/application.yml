@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: ruizi
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/ruizi?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: root
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台打印SQL语句
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID # 雪花算法
+ruizi:
+  path: D:\img\ # 图片存储路径
